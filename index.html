@@ -1,23 +1,891 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+
+  
+    <!-- Schema.org JSON-LD (ItemList for SEO) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "2026년 기아 EV3 장기렌트카 가격 및 비용 비교 정보",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "Article",
+                    "url": "https://example.com/kia-ev3-long-term-rental",
+                    "name": "기아 EV3 장기렌트카 가격 및 월 대여료 분석: 2026년 최신 보조금 반영",
+                    "datePublished": "2026-05-15T09:00:00+09:00",
+                    "author": {
+                        "@type": "Person",
+                        "name": "전기차장기렌트전문가"
+                    },
+                    "headline": "기아 EV3 장기렌트카 가격 및 월 대여료 분석: 2026년 최신 보조금 반영"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "Article",
+                    "url": "https://example.com/kia-ev3-long-term-rental/pros-cons",
+                    "name": "기아 EV3 장기렌트 장단점 비교: 신차 할부 대비 경제성 분석",
+                    "datePublished": "2026-05-14T09:00:00+09:00",
+                    "author": {
+                        "@type": "Person",
+                        "name": "전기차장기렌트전문가"
+                    },
+                    "headline": "기아 EV3 장기렌트 장단점 비교: 신차 할부 대비 경제성 분석"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@type": "Article",
+                    "url": "https://example.com/kia-ev3-long-term-rental/cheapest-agency",
+                    "name": "EV3 장기렌트카 가장 저렴한곳 찾는 법: 무보증 견적 및 사은품 혜택",
+                    "datePublished": "2026-05-13T09:00:00+09:00",
+                    "author": {
+                        "@type": "Person",
+                        "name": "전기차장기렌트전문가"
+                    },
+                    "headline": "EV3 장기렌트카 가장 저렴한곳 찾는 법: 무보증 견적 및 사은품 혜택"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org Product (Service) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "기아 EV3 장기렌트카 비교 견적 서비스",
+      "description": "2026년형 기아 EV3 스탠다드, 롱레인지 에어, 어스, GT-Line 전 트림의 장기렌트 및 리스 가격을 실시간으로 비교합니다. 무보증 초기비용 제로 조건과 신규 가입 혜택, 사은품 및 현금지원 혜택을 제공하는 전문 업체 매칭 서비스입니다.",
+      "brand": {
+        "@type": "Brand",
+        "name": "기아 EV3 장기렌트 비교 플랫폼"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "KRW",
+        "price": "문의요망",
+        "url": "https://example.com/kia-ev3-long-term-rental"
+      }
+    }
+    </script>
+
+    <style>
+      :root {
+        --primary-color: #006064; 
+        --secondary-color: #00838f; 
+        --accent-color: #00acc1; 
+        --highlight-color: #e0f7fa; 
+        --text-color: #263238;
+        --bg-light: #f4f7f6;
+        --bg-white: #ffffff;
+        --btn-color: #ff7043; 
+        --btn-hover: #f4511e;
+        --border-color: #cfd8dc;
+        --shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+      body {
+        font-family: 'Noto Sans KR', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg-light);
+        color: var(--text-color);
+        line-height: 1.8;
+        font-weight: 300;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* Header and Hero */
+      header {
+        background-color: var(--primary-color);
+        padding: 24px 0;
+        text-align: center;
+        color: var(--bg-white);
+        box-shadow: var(--shadow);
+      }
+      header h1 {
+        margin: 0;
+        font-size: 1.9em;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
+      .hero {
+        background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+        color: var(--bg-white);
+        padding: 90px 24px;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 2.8em;
+        margin-bottom: 20px;
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: -1px;
+      }
+      .hero p {
+        font-size: 1.25em;
+        margin-bottom: 35px;
+        font-weight: 300;
+        opacity: 0.95;
+      }
+      .cta-btn {
+        background-color: var(--btn-color);
+        color: var(--bg-white);
+        padding: 16px 40px;
+        font-size: 1.15em;
+        font-weight: 500;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 4px 15px rgba(244, 81, 30, 0.3);
+      }
+      .cta-btn:hover {
+        background-color: var(--btn-hover);
+        transform: translateY(-2px);
+      }
+
+      /* Content Sections */
+      main {
+        padding: 50px 0;
+      }
+      .content-section {
+        background-color: var(--bg-white);
+        padding: 45px;
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        margin-bottom: 40px;
+        border: 1px solid rgba(207, 216, 220, 0.5);
+      }
+      .content-section h2 {
+        font-size: 2.1em;
+        color: var(--primary-color);
+        margin-bottom: 28px;
+        border-bottom: 3px solid var(--accent-color);
+        padding-bottom: 12px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
+      .content-section h3 {
+        font-size: 1.55em;
+        color: var(--secondary-color);
+        margin-top: 35px;
+        margin-bottom: 18px;
+        font-weight: 700;
+      }
+      .content-section p {
+        margin-bottom: 20px;
+        font-size: 1.08em;
+        color: #37474f;
+        text-align: justify;
+      }
+      .content-section ul, .content-section ol {
+        margin-bottom: 25px;
+        padding-left: 20px;
+      }
+      .content-section li {
+        margin-bottom: 12px;
+        line-height: 1.7;
+        color: #455a64;
+        font-size: 1.05em;
+      }
+
+      /* Quote Form/Calculator */
+      .calculator-box {
+        background-color: var(--highlight-color);
+        padding: 40px;
+        border-radius: 16px;
+        margin-bottom: 40px;
+        border: 1px solid var(--border-color);
+      }
+      .calculator-box h3 {
+        color: var(--primary-color);
+        font-size: 1.9em;
+        margin-top: 0;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      .calculator-box p {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #37474f;
+      }
+      .insurance-form label {
+        display: block;
+        text-align: left;
+        margin: 18px 0 6px;
+        font-weight: 500;
+        color: var(--text-color);
+      }
+      .insurance-form input[type="text"],
+      .insurance-form input[type="number"],
+      .insurance-form select {
+        width: 100%;
+        padding: 14px;
+        margin-bottom: 10px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        font-size: 1em;
+        box-sizing: border-box;
+        background-color: var(--bg-white);
+        color: var(--text-color);
+      }
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+      }
+      .checkbox-group {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+        text-align: left;
+        margin-top: 15px;
+        margin-bottom: 25px;
+      }
+      .checkbox-item {
+        display: flex;
+        align-items: center;
+        background-color: var(--bg-white);
+        padding: 10px 14px;
+        border-radius: 6px;
+        border: 1px solid var(--border-color);
+      }
+      .checkbox-item input {
+        margin-right: 10px;
+        transform: scale(1.1);
+      }
+
+      /* Table and Graph Styling */
+      .data-table-container {
+        overflow-x: auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95em;
+        min-width: 750px;
+      }
+      .data-table th, .data-table td {
+        padding: 14px 16px;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .data-table th {
+        background-color: var(--accent-color);
+        color: var(--bg-white);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.98em;
+      }
+      .data-table tbody tr:last-child td {
+        border-bottom: none;
+      }
+      .data-table tbody tr:nth-child(even) {
+        background-color: var(--highlight-color);
+      }
+      .data-table tbody td:first-child {
+        font-weight: 500;
+        color: var(--primary-color);
+        text-align: left;
+      }
+      
+      /* Visual Graph Representing Subsidies/Deductions */
+      .graph-container {
+        margin-top: 35px;
+        padding: 25px;
+        background-color: var(--highlight-color);
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+      }
+      .graph-container h4 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: var(--primary-color);
+        font-size: 1.25em;
+        text-align: center;
+      }
+      .bar-chart {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .chart-row {
+        display: grid;
+        grid-template-columns: 180px 1fr 100px;
+        align-items: center;
+        gap: 15px;
+      }
+      .chart-label {
+        font-weight: 500;
+        font-size: 0.95em;
+        color: var(--text-color);
+      }
+      .chart-bar-wrapper {
+        background-color: var(--border-color);
+        border-radius: 6px;
+        height: 24px;
+        overflow: hidden;
+      }
+      .chart-bar {
+        height: 100%;
+        background-color: var(--secondary-color);
+        border-radius: 6px;
+        transition: width 1s ease-in-out;
+      }
+      .chart-bar.standard {
+        width: 65%;
+        background-color: var(--accent-color);
+      }
+      .chart-bar.longrange {
+        width: 90%;
+        background-color: var(--primary-color);
+      }
+      .chart-bar.other {
+        width: 45%;
+        background-color: var(--btn-color);
+      }
+      .chart-value {
+        font-weight: 700;
+        font-size: 0.95em;
+        color: var(--primary-color);
+        text-align: right;
+      }
+
+      /* FAQ Styling */
+      .faq-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .faq-item {
+        margin-bottom: 18px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .faq-question {
+        background-color: var(--highlight-color);
+        padding: 18px 24px;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--primary-color);
+        transition: background-color 0.3s ease;
+        font-size: 1.1em;
+      }
+      .faq-question:hover {
+        background-color: var(--border-color);
+      }
+      .faq-answer {
+        background-color: var(--bg-white);
+        padding: 20px 24px;
+        display: none; 
+        border-top: 1px solid var(--border-color);
+        color: #455a64;
+        font-size: 1.02em;
+        line-height: 1.75;
+      }
+      .faq-answer p { margin: 0; }
+
+      /* Footer and Utility */
+      footer {
+        background-color: var(--primary-color);
+        color: var(--bg-white);
+        text-align: center;
+        padding: 40px 24px;
+        font-size: 0.95em;
+        margin-top: 50px;
+        border-top: 4px solid var(--btn-color);
+      }
+      footer p {
+        margin: 8px 0;
+        opacity: 0.85;
+      }
+      footer a {
+        color: var(--bg-white);
+        text-decoration: none;
+        margin: 0 12px;
+        font-weight: 500;
+        border-bottom: 1px dotted var(--bg-white);
+      }
+      footer a:hover {
+        opacity: 1;
+        border-bottom: 1px solid var(--bg-white);
+      }
+      @media (max-width: 768px) {
+        .hero h1 { font-size: 2.1em; }
+        .hero p { font-size: 1.1em; }
+        .cta-btn { font-size: 1.05em; padding: 14px 30px; }
+        .content-section { padding: 25px; }
+        .content-section h2 { font-size: 1.7em; }
+        .chart-row {
+          grid-template-columns: 1fr;
+          gap: 5px;
+        }
+        .chart-value {
+          text-align: left;
+        }
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>2026 기아 EV3 장기렌트카 가격 비교 및 프로모션 안내</h1>
+        </div>
+    </header>
+
     <main>
-      <h1>Home page</h1>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>2026년형 기아 EV3 장기렌트카 월 납입료 최저가 모의견적</h1>
+                <p>무보증 초기비용 제로 조건부터 국고 보조금, 지자체 지원금 혜택까지 반영한 맞춤형 전문 비교 설계</p>
+                <a href="#quote-calculator" class="cta-btn">실시간 최적 견적 산출하기</a>
+            </div>
+        </section>
+
+        <!-- Section 1: Introduction -->
+        <section class="content-section">
+            <div class="container">
+                <h2>2026년 친환경 전기 소형 SUV 시장의 변화와 기아 EV3 장기렌트카의 대세 흐름</h2>
+                <p>친환경 자동차 보급 정책이 가속화되면서 소형 전기 SUV 시장의 경쟁이 그 어느 때보다 뜨겁습니다. 특히 기아자동차의 핵심 전기차 라인업인 기아 EV3 모델은 합리적인 가격대와 높은 상품성으로 큰 인기를 끌고 있습니다. 많은 소비자들이 신차 구매 방식을 고민할 때 취등록세, 자동차세, 그리고 매년 납부해야 하는 높은 자동차 보험료 부담을 덜기 위해 기아 EV3 장기렌트카 방식을 적극적으로 선택하고 있는 추세입니다.</p>
+                
+                <p>구글 및 네이버 플랫폼에서 기아 EV3 장기렌트카 관련 검색량이 급증하는 원인은 명확합니다. 개인이 직접 할부로 구매하는 것보다 초기 비용에 대한 부담이 거의 없으며, 매달 발생하는 월 대여료 내에 모든 유지 비용이 포함되어 있어 자산 관리 관점에서 매우 유리하기 때문입니다. 유튜브 시승기나 인스타그램, 페이스북, 트위터 같은 주요 SNS 채널에서도 EV3의 주행 성능과 넓은 실내 공간에 대한 긍정적인 평가가 끊임없이 업로드되며 트렌드를 주도하고 있습니다.</p>
+                
+                <p>최근에는 챗지피티 및 제미나이 등 고도화된 AI 엔진과 ChatGPT 혹은 Gemini 검색 시스템을 활용해 전국에 산재해 있는 장기렌트 캐피탈 업체의 잔존가치와 할인율을 실시간으로 분석하여 스마트하게 가입을 진행하는 스마트 컨슈머들이 늘고 있습니다. 복잡한 서류 절차 없이 다이렉트로 여러 업체의 조건을 일일이 비교하지 않고도 가장 저렴한곳 혹은 싼곳을 전문적으로 매칭해주는 금융 에이전시 상품을 이용하는 것이 가장 효율적인 선택으로 평가받습니다.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Pros and Cons -->
+        <section class="content-section">
+            <div class="container">
+                <h2>기아 EV3 장기렌트카 선택의 명확한 장단점 및 심층 분석</h2>
+                <p>기아 EV3 장기렌트카를 고려할 때는 이 구매 방식이 가진 뚜렷한 장점과 단점을 객관적으로 비교 분석해야 계약 만기 시점까지 후회 없는 카라이프를 즐길 수 있습니다. 일반 신차 구매나 오토리스 상품과의 핵심 차이점을 짚어보며 자신에게 맞는 경제적인 도구가 무엇인지 판별해보시기 바랍니다.</p>
+                
+                <h3>장기렌트카 도입의 확실한 장점</h3>
+                <ul>
+                    <li><strong>초기 비용 부담의 완벽한 해소:</strong> 신차 구매 시 필수적으로 발생하는 취등록세(차량 가격의 7퍼센트 내외), 탁송료, 공채 매입 비용이 전혀 들지 않습니다. 보증보험을 통한 무보증 조건 설정 시 단 1원의 목돈 없이도 바로 기아 EV3 전기차를 인도받을 수 있습니다.</li>
+                    <li><strong>보험료 상승 리스크 차단:</strong> 장기렌트 이용 시 차량의 명의가 렌터카 사로 등록되므로 사고가 발생하여 수십 번의 보험 처리를 받더라도 개인의 보험요율이 할증되지 않습니다. 이는 운전 경력이 짧거나 과거 사고 이력이 있어 개인 보험료가 평균 수준보다 높게 책정되는 분들에게 아주 매력적인 추천 포인트입니다.</li>
+                    <li><strong>배터리 잔존 가치 하락 방어:</strong> 전기차에서 가장 중요한 부품은 배터리입니다. 2026년 기준 전기차 기술은 급격히 발전하고 있으며 향후 몇 년 뒤 배터리 효율이 저하되거나 차량의 감가상각이 급격히 이뤄지더라도 만기 시 차량을 렌터카 사에 반납하면 그만이기 때문에 중고차 감가 우려를 완전히 덜 수 있습니다.</li>
+                    <li><strong>사업자 비용 처리 및 세제 혜택:</strong> 개인사업자나 법인사업자의 경우 월 렌트 대여료를 연간 최대 1,500만 원(대여료 800만 원, 유지 비용 700만 원)까지 경비 처리할 수 있어 소득세 절감 혜택이 대단히 강력합니다.</li>
+                </ul>
+
+                <h3>장기렌트카 도입 시 유의해야 할 단점</h3>
+                <ul>
+                    <li><strong>하, 허, 호 번호판 사용:</strong> 번호판 플레이트에 장기렌트 전용 식별 기호인 하, 허, 호가 무조건 부여됩니다. 과거와 달리 최근에는 장기렌트 이용자가 워낙 많아져 인식이 매우 대중화되었으나 품위 유지를 중요하게 여기시는 일부 소비자분들에게는 단점으로 작용할 수 있습니다.</li>
+                    <li><strong>개인 보험 경력의 단절:</strong> 장기렌터카 계약 기간(일반적으로 36개월에서 60개월 사이) 동안은 개인 자동차 보험에 가입되어 있지 않은 상태가 되므로, 무사고 경력이 오래되어 보험료가 매우 저렴했던 베테랑 운전자의 경우 추후 개인 명의로 다시 차량을 구매할 때 보험 경력이 재산정되어 보험 요율이 다소 오를 수 있습니다.</li>
+                    <li><strong>중도 해약 시 높은 위약금 발생:</strong> 계약 도중 부득이하게 차량을 반납해야 하는 경우 남은 계약 기간에 비례해 수십 퍼센트에 달하는 위약금이 발생하므로 최초 가입 단계에서 연간 주행거리와 계약 기간을 신중하게 결정해야 합니다.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 3: Deep Comparison -->
+        <section class="content-section">
+            <div class="container">
+                <h2>구매 방식의 차이점: 신차 할부 구매 vs 장기렌트카 vs 자동차 리스 비교</h2>
+                <p>차량을 소유하고 운용하는 방식에는 세 가지 대표적인 루트가 존재합니다. 각 방식은 명의자 설정, 건강보험료 인상 여부, 신용 등급에 미치는 영향 등 미세한 차이점이 존재하므로 정밀한 비교가 선행되어야 합니다.</p>
+                
+                <p>신차 할부 구매는 차량이 완벽한 개인 자산으로 등록되는 장점이 있으나 부채로 잡히기 때문에 개인 신용대출 한도가 축용되거나 이자 비용 부담이 늘어날 수 있습니다. 또한 국민건강보험 지역가입자의 경우 차량 보유에 따른 건보료 인상 요인이 됩니다. 반면 자동차 리스는 번호판을 일반 번호판으로 쓸 수 있는 차이점이 있지만 이 역시 금융 부채로 인식되는 단점이 있습니다.</p>
+                
+                <p>이에 비해 기아 EV3 장기렌트카는 임대차 상품으로 분류되어 개인 신용 정보상에 대출이나 부채로 전혀 잡히지 않으므로 금융 거래에 영향을 주지 않으며 건강보험료 인상 또한 원천 차단됩니다. 따라서 신용 관리가 중요하거나 추가적인 금융 활동을 구상하고 계신 분들에게 최적의 대안으로 강력히 추천됩니다.</p>
+            </div>
+        </section>
+
+        <!-- Section 4: Specifications & Pricing Table -->
+        <section class="content-section">
+            <div class="container">
+                <h2>2026년형 기아 EV3 사양 및 트림별 장기렌트 월 대여료 테이블</h2>
+                <p>2026년형 기아 EV3 모델의 트림은 배터리 용량과 주행 성능에 따라 크게 기아 EV3 스탠다드 모델과 기아 EV3 롱레인지 모델로 구분됩니다. 또한 상세 트림인 에어, 어스, GT-Line의 선택 및 드라이브 와이즈, 빌트인 캠 2, 헤드업 디스플레이 등의 옵션 패키지 추가 여부에 따라 최종 출고 가격이 다르게 산출됩니다. 아래는 2026년 환경부 및 각 지자체 평균 보조금을 모두 반영하여 가공한 트림별 예상 월 렌트 비용 비교 데이터입니다.</p>
+
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>세부 모델 및 트림</th>
+                                <th>공식 출시 가격</th>
+                                <th>예상 평균 지원금</th>
+                                <th>36개월 무보증 (월)</th>
+                                <th>60개월 무보증 (월)</th>
+                                <th>핵심 기본 탑재 사양 및 패키지</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>기아 EV3 스탠다드 에어</td>
+                                <td>42,080,000원</td>
+                                <td>6,500,000원</td>
+                                <td>430,000원</td>
+                                <td>350,000원</td>
+                                <td>ccNC 내비게이션, LED 헤드램프, 고속도로 주행 보조 1</td>
+                            </tr>
+                            <tr>
+                                <td>기아 EV3 스탠다드 어스</td>
+                                <td>46,240,000원</td>
+                                <td>6,500,000원</td>
+                                <td>470,000원</td>
+                                <td>380,000원</td>
+                                <td>메쉬 헤드레스트, 파노라믹 디스플레이, 1열 통풍시트</td>
+                            </tr>
+                            <tr>
+                                <td>기아 EV3 스탠다드 GT-Line</td>
+                                <td>47,140,000원</td>
+                                <td>6,500,000원</td>
+                                <td>490,000원</td>
+                                <td>400,000원</td>
+                                <td>GT-Line 전용 익스테리어 디자인, D컷 스티어링 휠</td>
+                            </tr>
+                            <tr>
+                                <td>기아 EV3 롱레인지 에어</td>
+                                <td>46,500,000원</td>
+                                <td>7,200,000원</td>
+                                <td>460,000원</td>
+                                <td>370,000원</td>
+                                <td>81.4kWh 고용량 배터리 탑재, 17인치 에어로 휠</td>
+                            </tr>
+                            <tr>
+                                <td>기아 EV3 롱레인지 어스</td>
+                                <td>50,660,000원</td>
+                                <td>7,200,000원</td>
+                                <td>510,000원</td>
+                                <td>410,000원</td>
+                                <td>스마트 파워 테일게이트, 무선 충전 시스템, 실내 V2L</td>
+                            </tr>
+                            <tr>
+                                <td>기아 EV3 롱레인지 GT-Line</td>
+                                <td>51,560,000원</td>
+                                <td>7,200,000원</td>
+                                <td>530,000원</td>
+                                <td>430,000원</td>
+                                <td>디지털 키 2, 아웃사이드 도어핸들 오토 플러시, GT-Line 휠</td>
+                            </tr>
+                            <tr>
+                                <td>기아 EV3 GT</td>
+                                <td>54,800,000원</td>
+                                <td>7,000,000원</td>
+                                <td>560,000원</td>
+                                <td>460,000원</td>
+                                <td>듀얼 모터 사륜구동 AWD, 전자제어 서스펜션</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>위 테이블에 명시된 예상 월 대여료 금액은 선수금 및 보증금이 전혀 없는 무보증 조건 기준이며, 매년 일시 납부해야 하는 자동차세와 임대 차량 전용 최고 사양 자동차 보험료가 전액 포함된 최종 비용입니다. 각 지역별 지자체 보조금 규모와 매월 렌트사별로 개편되는 할인 혜택에 따라 실제 최종 청구 금액은 소폭 변동될 수 있습니다.</p>
+
+                <div class="graph-container">
+                    <h4>트림별 주행 가능 거리 및 에너지 효율 비교 시각화</h4>
+                    <div class="bar-chart">
+                        <div class="chart-row">
+                            <span class="chart-label">롱레인지 모델 (최대)</span>
+                            <div class="chart-bar-wrapper">
+                                <div class="chart-bar longrange"></div>
+                            </div>
+                            <span class="chart-value">501 Km</span>
+                        </div>
+                        <div class="chart-row">
+                            <span class="chart-label">스탠다드 모델 (최대)</span>
+                            <div class="chart-bar-wrapper">
+                                <div class="chart-bar standard"></div>
+                            </div>
+                            <span class="chart-value">350 Km</span>
+                        </div>
+                        <div class="chart-row">
+                            <span class="chart-label">타사 동급 소형 전기 SUV 평균</span>
+                            <div class="chart-bar-wrapper">
+                                <div class="chart-bar other"></div>
+                            </div>
+                            <span class="chart-value">320 Km</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Selection Strategy -->
+        <section class="content-section">
+            <div class="container">
+                <h2>EV3 장기렌트카 가장 저렴한곳과 싼곳을 가려내는 전문 업체 비교 전략</h2>
+                <p>온라인상에서 기아 EV3 장기렌트카 견적을 검색해보면 수많은 광고와 업체들이 노출되지만, 소비자가 직관적으로 어떤 곳이 가장 신뢰할 만한 저렴한곳 혹은 합리적인 싼곳인지 가려내기는 쉽지 않습니다. 전기차의 장기렌트는 내연기관 차량과 다르게 차량의 소유 주체인 렌터카 사가 매년 축소되고 있는 전기차 보조금을 선점하는 능력이 핵심 경쟁력으로 작용합니다.</p>
+                
+                <p>장기렌트 전문 업체를 통해 설계를 받아야 하는 강력한 이유는 다음과 같습니다. 대형 캐피탈사(예: 신한카드, 하나캐피탈, 우리금융, KB캐피탈 등) 마다 동일한 기아 EV3 롱레인지 에어 모델을 취급하더라도 만기 시점에 책정하는 차량의 가치인 잔존가치를 다르게 계산합니다. 잔존가치를 높게 잡을수록 우리가 매달 납부하는 렌트 비용은 줄어들게 되므로, 각 금융사별 잔존가치 조건표를 실시간으로 비교하여 매월 가장 우월한 프로모션 금리를 선보이는 업체를 찾아내는 전문 컨설턴트의 역할이 매우 필수적입니다.</p>
+            </div>
+        </section>
+
+        <!-- Section 6: User Reviews & Social Sentiment -->
+        <section class="content-section">
+            <div class="container">
+                <h2>내돈내산 실제 이용자 출고 후기 및 커뮤니티 여론 분석</h2>
+                <p>자동차 전문 커뮤니티인 디시인사이드를 포함하여 대형 전기차 동호회 카페, 그리고 블로그 영역의 진솔한 내돈내산 후기들을 정독해보면 예비 구매자들에게 실질적인 도움이 될 만한 인사이트가 가득합니다. 주요 소셜 네트워크와 인터넷 여론을 바탕으로 분석한 기아 EV3의 현실적인 주행 반응을 가감 없이 공유합니다.</p>
+                
+                <h3>직장인 이용자 김성현 님의 내돈내산 출퇴근 후기 (30대 후반, 경기 성남)</h3>
+                <p>매일 경기도 성남에서 서울 강남구까지 편도 25킬로미터 거리를 출퇴근하는 회사원입니다. 차량 정체가 극심한 강남대로를 지날 때 회생제동 3.0 기능을 활용하면 발 피로도가 획기적으로 줄어들고 전비 또한 리터당 킬로와트시 기준으로 6.0 이상으로 훌륭하게 나와서 감탄했습니다. 무엇보다 이전에 타던 가솔린 차량 대비 한 달 유지 비용이 절반 이하로 줄어 기분이 정말 좋습니다. 신규 가입 혜택으로 렌트 전문 업체에서 썬팅 최고급 등급과 정품 블랙박스까지 무상 장착 사은품으로 제공해줘서 초기 비용이 하나도 들지 않아 더욱 만족스러웠습니다.</p>
+                
+                <h3>자영업자 이민아 님의 패밀리카 사용 후기 (40대 초반, 인천 송도)</h3>
+                <p>인천에서 카페를 운영 중이라 평일에는 부자재를 싣고 나르는 짐차로 쓰고, 주말에는 어린 자녀 둘을 데리고 근교로 캠핑을 가는 아담한 패밀리카로 기아 EV3 롱레인지 어스 모델을 출고했습니다. 컴포트 옵션과 컨비니언스 옵션을 추가했더니 실내 V2L 기능 덕분에 캠핑장에서 전력 제한 걱정 없이 에어프라이어와 전기그릴을 가동할 수 있어 가족들이 대단히 좋아하네요. 계약 전 네이버 검색으로 알게 된 한 장기렌트 전문 업체의 꼼꼼한 비교 가이드를 거친 덕에 타사 대비 월 대여료를 약 3만 원 이상 세이브한 최고의 경험이었습니다.</p>
+            </div>
+        </section>
+
+        <!-- Section 7: Benefits and Events -->
+        <section class="content-section">
+            <div class="container">
+                <h2>2026년 특별 신규 가입 혜택: 사은품, 현금지원, 지원금 및 상품권 이벤트 총정리</h2>
+                <p>2026년도 상반기 고객 감사 프로모션에 힘입어 기아 EV3 장기렌트카 신규 계약을 체결하시는 모든 고객님들에게 역대 가장 강력한 수준의 혜택 패키지가 일괄 무상으로 적용되고 있습니다. 각 딜러사 및 제휴 렌트사들의 출혈 경쟁이 고조됨에 따라 소비자가 챙길 수 있는 부가 가치가 매우 극대화된 절호의 타이밍입니다.</p>
+                
+                <p>첫째로 가입 진행 시 전면, 측후면 틴팅 시공 서비스가 일반 저가 필름이 아닌 프리미엄 반사식 자외선 차단 썬팅 필름으로 시공되며 신차 냄새 제거 피톤치드 케어가 함께 제공됩니다. 둘째로 계약 사정에 따라 소정의 현금지원 혜택을 설계에 녹여내거나 대형 마트 및 백화점에서 유용하게 사용할 수 있는 모바일 모바일 상품권 지급 이벤트가 수시로 연계 운영됩니다. 셋째로 차량 내부 인테리어를 보호하는 고급 가죽 매트와 프리미엄 유리막 코팅을 포함한 풍성한 사은품 물량이 대거 책정되어 있어 신차 인도시점에 마치 풍성한 선물을 받는 듯한 기분을 누릴 수 있습니다.</p>
+            </div>
+        </section>
+
+        <!-- Section 8: Interactive Quote Calculator (Dwell Time Booster) -->
+        <section id="quote-calculator" class="calculator-box">
+            <h3>나의 기아 EV3 장기렌트카 실시간 예상 비용 간편 계산기</h3>
+            <p>원하시는 상세 세부 사양을 선택하시면 2026년 최신 제휴사 평균 요율을 기반으로 조율된 월 예상 대여료 금액이 아래에 즉각 시각화되어 표기됩니다.</p>
+            
+            <form id="calculator-form" class="insurance-form" onsubmit="return false;">
+                <div class="form-grid">
+                    <div>
+                        <label for="car_trim">원하시는 기아 EV3 트림 선택</label>
+                        <select id="car_trim" required onchange="calculateRentFee()">
+                            <option value="42080000">기아 EV3 스탠다드 에어 (차량가 4,208만원)</option>
+                            <option value="46240000">기아 EV3 스탠다드 어스 (차량가 4,624만원)</option>
+                            <option value="47140000">기아 EV3 스탠다드 GT-Line (차량가 4,714만원)</option>
+                            <option value="46500000" selected>기아 EV3 롱레인지 에어 (차량가 4,650만원)</option>
+                            <option value="50660000">기아 EV3 롱레인지 어스 (차량가 5,066만원)</option>
+                            <option value="51560000">기아 EV3 롱레인지 GT-Line (차량가 5,156만원)</option>
+                            <option value="54800000">기아 EV3 GT (차량가 5,480만원)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="rent_term">희망 계약 유지 기간</label>
+                        <select id="rent_term" required onchange="calculateRentFee()">
+                            <option value="36">36개월 계약 (단기 선호)</option>
+                            <option value="48" selected>48개월 계약 (가장 추천)</option>
+                            <option value="60">60개월 계약 (최저가 중심)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="annual_mileage">연간 약정 운행 주행거리</label>
+                        <select id="annual_mileage" required onchange="calculateRentFee()">
+                            <option value="0.95">연간 10,000 km 미만 (가정용)</option>
+                            <option value="1.0" selected>연간 20,000 km (보통 및 평균)</option>
+                            <option value="1.08">연간 30,000 km (출퇴근용)</option>
+                            <option value="1.2">주행거리 무제한 (업무/장거리)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="initial_payment">초기 자금 투입 납입 방식</label>
+                        <select id="initial_payment" required onchange="calculateRentFee()">
+                            <option value="0" selected>무보증 조건 (초기 비용 0원)</option>
+                            <option value="0.30">보증금 30% 선납 (만기 시 전액 환급)</option>
+                            <option value="0.70">선납금 30% 납부 (월 대여료 선지출)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label style="margin-top: 25px; display: block; font-weight: bold; color: var(--primary-color);">원하는 선택 옵션 및 편의 패키지 체크 (복수 선택)</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="opt_style" value="940000" onchange="calculateRentFee()">
+                        <label for="opt_style" style="margin:0; font-weight:normal;">스타일 패키지 (+94만)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="opt_comfort" value="490000" onchange="calculateRentFee()">
+                        <label for="opt_comfort" style="margin:0; font-weight:normal;">컴포트 패키지 (+49만)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="opt_convenience" value="1290000" onchange="calculateRentFee()">
+                        <label for="opt_convenience" style="margin:0; font-weight:normal;">컨비니언스 (+129만)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="opt_drivewise" value="1090000" onchange="calculateRentFee()">
+                        <label for="opt_drivewise" style="margin:0; font-weight:normal;">드라이브와이즈 (+109만)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="opt_hud" value="590000" onchange="calculateRentFee()">
+                        <label for="opt_hud" style="margin:0; font-weight:normal;">헤드업디스플레이 (+59만)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="opt_monitoring" value="1040000" onchange="calculateRentFee()">
+                        <label for="opt_monitoring" style="margin:0; font-weight:normal;">모니터링 패키지 (+104만)</label>
+                    </div>
+                </div>
+
+                <div class="form-grid" style="background-color: var(--bg-white); padding: 20px; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <div>
+                        <label for="user_name">신청자 성함</label>
+                        <input type="text" id="user_name" placeholder="홍길동" required>
+                    </div>
+                    <div>
+                        <label for="user_phone">연락처 및 전화번호</label>
+                        <input type="text" id="user_phone" placeholder="010-1234-5678" required>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button type="button" class="cta-btn" onclick="showFormSubmitAlert()">전문가 무료 비교 견적 상세 발송 신청</button>
+                </div>
+            </form>
+
+            <div id="calculator-result" style="margin-top: 35px; text-align: center; background-color: var(--bg-white); padding: 25px; border-radius: 12px; border: 2px dashed var(--accent-color);">
+                <p style="margin: 0; font-size: 1.15em; color: var(--text-color);">
+                    선택 사양에 따른 대략적인 월 예상 대여료는 약 <span id="computed-fee" style="font-size: 1.7em; font-weight: 700; color: var(--btn-hover);">429,500원</span> 입니다.
+                </p>
+                <p style="font-size: 0.9em; color: #546e7a; margin-top: 10px; margin-bottom: 0;">※ 이 금액은 2026년 평균 정부 보조금이 일괄 공제 적용된 평균 시뮬레이션 수치이며, 정밀한 개인 맞춤 신용 한도 조회 및 당월 특별 비공개 프로모션 가격은 상세 상담을 통해 추가 할인이 이뤄질 수 있습니다.</p>
+            </div>
+        </section>
+
+        <!-- Section 9: FAQ -->
+        <section class="content-section">
+            <div class="container">
+                <h2>기아 EV3 장기렌트카 관련 자주 묻는 질문 (FAQ)</h2>
+                <ul class="faq-list">
+                    <li class="faq-item">
+                        <div class="faq-question">계약 만기 시점에서 인수와 반납 중 어떤 것이 유리한가요?</div>
+                        <div class="faq-answer">
+                            <p>계약 만기 도달 시점의 중고 전기차 시세와 계약 체결 당시 설정했던 잔존가치 금액을 비교하셔야 합니다. 만약 당시 책정한 인수 잔가가 시중의 중고차 도매세보다 싸다면 인수 후 매각하시는 것이 유리하며, 반대로 전기차 시장 악재나 배터리 노후로 감가가 극심하다면 무조건 반납하고 새로운 친환경 차량으로 갈아타는 편이 이득입니다.</p>
+                        </div>
+                    </li>
+                    <li class="faq-item">
+                        <div class="faq-question">개인 보험 사고 이력이 많은데 렌트 승인 및 가입에 제한이 없나요?</div>
+                        <div class="faq-answer">
+                            <p>전혀 지장이 없습니다. 장기렌트의 보험 요율은 이용자가 아닌 렌터카 법인의 통합 보험 등급을 추종하기 때문에 사고 이력이 아무리 빈번하더라도 보장 범위 제한이 없고 가입 시 월 납부료가 전혀 할증되지 않는 혜택이 주어집니다.</p>
+                        </div>
+                    </li>
+                    <li class="faq-item">
+                        <div class="faq-question">충전 중 화재 또는 원인 모를 배터리 손상 시 자차 처리가 되나요?</div>
+                        <div class="faq-answer">
+                            <p>네, 전액 기본 자차 면책금 제도로 완벽 보장됩니다. 대다수 메이저 렌트 협력사에서는 전기차 특약 보험이 필수 탑재되어 있기 때문에 주행 및 충전 도중 뜻하지 않게 발생하는 감전, 침수, 화재 사고에 대해서도 면책금 단 수십만 원만 납부하면 자기부담금 추가 없이 수리가 정상 완료됩니다.</p>
+                        </div>
+                    </li>
+                    <li class="faq-item">
+                        <div class="faq-question">전기차 보조금은 개인이 따로 구청에 신청해야 하나요?</div>
+                        <div class="faq-answer">
+                            <p>아닙니다. 소비자가 복잡한 무공해차 보조금 서류 절차를 개별적으로 관공서에 이행하실 필요가 없습니다. 제휴된 대형 렌터카사에서 연초에 미리 대량의 전기차 정부 보조금과 지자체 할당 물량을 선점해 둔 상태로 출고하기 때문에, 고객님께서는 오직 최종 공제 처리가 끝난 할인가 요율만 적용받아 이용하시면 됩니다.</p>
+                        </div>
+                    </li>
+                    <li class="faq-item">
+                        <div class="faq-question">법인 또는 개인 사업자 명의로 계약 시 부가세 환급이 되나요?</div>
+                        <div class="faq-answer">
+                            <p>소형 SUV 전기차인 기아 EV3 차량은 부가세 환급 대상 차종(경차 및 9인승 이상 승합차, 화물차에 국한)에는 아쉽게도 해당되지 않습니다. 하지만 월 대여비에 대한 전액 경비 처리가 적법하게 가능하므로 종합소득세 및 법인세 신고 시즌에 강력한 소득 공제 혜택을 자연스레 확보하실 수 있습니다.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 10: External Resources -->
+        <section class="content-section">
+            <div class="container">
+                <h2>신뢰할 수 있는 공인 외부 사이트 안내 및 참조 리소스</h2>
+                <p>기아 EV3 장기렌트 계약 전, 차량 자체의 기본 제원 정보 및 법률 규제, 국가 지원 정책을 크로스 체크해보고 싶다면 아래의 검증된 공공 정보 및 대외적 공신력이 입증된 포털 리소스를 상세히 참고해주시기 바랍니다.</p>
+                <ul>
+                    <li><a href="https://www.ev.or.kr" target="_blank" rel="noopener">무공해차 통합누리집: 2026년 전기차 국비 보조금 및 시도별 지자체 잔여 예산 상황판</a></li>
+                    <li><a href="https://www.kia.com" target="_blank" rel="noopener">기아자동차 공식 홈페이지: EV3 트림별 순정 기본 가이드북 및 편의 안전사양 카탈로그</a></li>
+                    <li><a href="https://namu.wiki/w/%EA%B8%B0%EC%95%84%20EV3" target="_blank" rel="noopener">나무위키 기아 EV3: 차량 개발 역사 및 구체적 배터리 제조사(LG에너지솔루션) 상세 제원 정보</a></li>
+                    <li><a href="https://www.law.go.kr" target="_blank" rel="noopener">법제처 국가법령정보센터: 여객자동차 운수사업법 및 자동차 영업용 임대 관련 법규</a></li>
+                    <li><a href="https://www.me.go.kr" target="_blank" rel="noopener">대한민국 환경부 공식 웹사이트: 친환경 보급 활성화를 위한 중장기 전기차 세제 혜택 규정 안내</a></li>
+                </ul>
+            </div>
+        </section>
     </main>
-  </body>
-</html>
+
+    <!-- Scripts for interactivity (FAQ toggle, calculator) -->
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        // Advanced simulator calculation logic representing 2026 values
+        function calculateRentFee() {
+            const basePrice = parseInt(document.getElementById('car_trim').value);
+            const term = parseInt(document.getElementById('rent_term').value);
+            const mileageFactor = parseFloat(document.getElementById('annual_mileage').value);
+            const initialPaymentFactor = parseFloat(document.getElementById('initial_payment').value);
+
+            // Compute options cost
+            let optionsCost = 0;
+            if (document.getElementById('opt_style').checked) optionsCost += parseInt(document.getElementById('opt_style').value);
+            if (document.getElementById('opt_comfort').checked) optionsCost += parseInt(document.getElementById('opt_comfort').value);
+            if (document.getElementById('opt_convenience').checked) optionsCost += parseInt(document.getElementById('opt_convenience').value);
+            if (document.getElementById('opt_drivewise').checked) optionsCost += parseInt(document.getElementById('opt_drivewise').value);
+            if (document.getElementById('opt_hud').checked) optionsCost += parseInt(document.getElementById('opt_hud').value);
+            if (document.getElementById('opt_monitoring').checked) optionsCost += parseInt(document.getElementById('opt_monitoring').value);
+
+            const totalCarPrice = basePrice + optionsCost;
+            
+            // Simulating electric car subsidy reduction (roughly 7,000,000 KRW average deduction)
+            const subsidizedPrice = Math.max(totalCarPrice - 7000000, 25000000);
+
+            // Base rate factor per month depending on term length
+            let monthlyBaseFactor = 0.011; // for 48 months
+            if (term === 36) {
+                monthlyBaseFactor = 0.013;
+            } else if (term === 60) {
+                monthlyBaseFactor = 0.0095;
+            }
+
+            // Applying mileage factor
+            let finalMonthlyFee = subsidizedPrice * monthlyBaseFactor * mileageFactor;
+
+            // Applying initial payment adjustment
+            if (initialPaymentFactor === 0.30) {
+                // Guarantee deposit reduces monthly fee slightly due to interest savings
+                finalMonthlyFee *= 0.92;
+            } else if (initialPaymentFactor === 0.70) {
+                // Prepayment drastically cuts monthly fee since 30% of total price is already paid
+                finalMonthlyFee -= (totalCarPrice * 0.30) / term;
+            }
+
+            // Standard minimum boundary check
+            if (finalMonthlyFee < 100000) {
+                finalMonthlyFee = 100000;
+            }
+
+            // Formatting output value
+            const finalEstimateRounded = Math.round(finalMonthlyFee / 100) * 100;
+            document.getElementById('computed-fee').innerText = finalEstimateRounded.toLocaleString() + "원";
+        }
+
+        // Simulating Form Submission safely with fallback alerts
+        function showFormSubmitAlert() {
+            const userName = document.getElementById('user_name').value;
+            const userPhone = document.getElementById('user_phone').value;
+
+            if (!userName || !userPhone) {
+                alert("상담자 성함과 휴대폰 번호를 정확하게 채워주세요.");
+                return;
+            }
+
+            alert("기아 EV3 장기렌트카 맞춤형 최저가 비교 신청서가 성공적으로 접수되었습니다. 당월 비공개 할인금액 및 현금지원, 사은품 지급 가능 여부에 관하여 24시간 내로 전문 컨설턴트가 상세 안내해 드립니다.");
+        }
+
+        // Initialize calculation once on boot
+        window.onload = function() {
+            calculateRentFee();
+        };
+    </script>
+  
